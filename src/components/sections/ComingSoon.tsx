@@ -17,10 +17,10 @@ export default function ComingSoon() {
                 Coming soon
               </span>
             )}
-            <p className="font-monument text-white text-subtitle uppercase text-white mb-2">
+            <p className="break-words font-monument text-white text-subtitle uppercase text-white mb-2">
               {post.title}
             </p>
-            <p className="font-satoshi font-bold bg-gradient-to-r from-blue to-purple inline-block text-transparent text-gradientText bg-clip-text">
+            <p className="break-words font-satoshi font-bold bg-gradient-to-r from-blue to-purple inline-block text-transparent text-gradientText bg-clip-text">
               {post.subtitle}
             </p>
           </div>
