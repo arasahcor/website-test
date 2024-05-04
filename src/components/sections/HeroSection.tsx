@@ -5,24 +5,23 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { INavOptions } from "@/interfaces";
-import { navigationOptions } from "../../../public/data/data";
+import { IIcon, INavOptions } from "@/interfaces";
+import { iconsFooter, navigationOptions } from "../../../public/data/data";
 
 export default function HeroSection() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div>
-      <div>
+    <div className="relative overflow-hidden">
       <video
-        className="absolute"
+        className="absolute w-full h-auto min-w-[1200px] max-w-full "
         src={require("../../../public/videos/main-background-video.mp4")}
         muted
         loop
         autoPlay
       />
       <div className="absolute inset-0 bg-gradient-to-b from-purple via-blue via-30% to-black to-70% opacity-40"></div>
-      </div>
+
       <header className="absolute inset-x-0 top-0 z-50">
         <nav
           className="flex items-center justify-between p-8 lg:px-12"
@@ -50,7 +49,7 @@ export default function HeroSection() {
           </div>
           <div className="hidden items-center lg:flex justify-between lg:gap-x-16">
             <div className="flex gap-x-11">
-              {navigationOptions.map((item: INavOptions) => (
+              {navigationOptions?.map((item: INavOptions) => (
                 <div key={item.id} className="items-center flex">
                   <a
                     key={item.name}
@@ -78,47 +77,56 @@ export default function HeroSection() {
           onClose={setMobileMenuOpen}
         >
           <div className="fixed inset-0 z-50" />
-          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
-                <span className="sr-only">Your Company</span>
-                <img
-                  className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  alt=""
-                />
-              </a>
-              <button
-                type="button"
-                className="-m-2.5 rounded-md p-2.5 text-gray-700"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                <span className="sr-only">Close menu</span>
-                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-              </button>
-            </div>
-            <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2 py-6">
-                  {navigationOptions.map((item: INavOptions) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-                <div className="py-6">
-                  <a
-                    href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                  >
-                    Log in
-                  </a>
+          <Dialog.Panel className="flex flex-col justify-between  fixed inset-y-0 right-0 z-50 w-lg overflow-y-auto bg-black px-8 py-6 sm:max-w-sm ">
+            <div>
+              <div className="flex items-center justify-end gap-x-5 mt-1">
+                <button className="ease-in duration-300 text-base bg-transparent hover:bg-blue  font-bold font-satoshi text-white py-1 px-5 border-2 border-white hover:border-blue hover:border-transparent rounded-md">
+                  Connect
+                </button>
+                <button
+                  type="button"
+                  className="bg-blue text-white -m-1.5 rounded-md p-1.5 text-gray-700"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <span className="sr-only">Close menu</span>
+                  <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                </button>
+              </div>
+              <div className="mt-6 ">
+                <div className="flex flex-col">
+                  <div className="border-b border-gray-900"></div>
+                  {navigationOptions?.map(
+                    (item: INavOptions, index: number) => (
+                      <div key={item.id} className="pt-2">
+                        <a
+                          key={item.name}
+                          href={item.href}
+                          className="text-base  hover:text-blue  font-bold font-satoshi text-white "
+                        >
+                          {item.name}
+                        </a>
+                        {item.soon && (
+                          <span className="ml-1 uppercase font-bold px-1 rounded-full text-badge text-purple bottom-[5px] relative font-satoshi bg-black">
+                            soon
+                          </span>
+                        )}
+                        <div className="border-b border-gray-900 pb-3"></div>
+                      </div>
+                    )
+                  )}
                 </div>
               </div>
+            </div>
+            <div className="flex items-center justify-start space-x-2">
+              {iconsFooter?.map((icon: IIcon) => (
+                <button key={icon.id} className="text-white">
+                  <img
+                    src={icon.img}
+                    className="h-icons w-icons"
+                    alt={icon.name}
+                  />
+                </button>
+              ))}
             </div>
           </Dialog.Panel>
         </Dialog>
@@ -130,7 +138,7 @@ export default function HeroSection() {
             The world's first platform for Tokenizing AI blockchain projects
           </h1>
 
-          <div className="flex flex-col w-fit pt-5">
+          <div className="flex flex-col w-fit pt-9">
             <hr className="h-px my-1.5 bg-gradient-to-r from-blue to-purple border-0 "></hr>
             <p className="break-words font-satoshi font-bold  text-gradientText bg-gradient-to-r from-blue to-purple bg-clip-text text-transparent">
               Hold the Creon Pass NFT and earn passive income from AI Tools

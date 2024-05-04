@@ -1,4 +1,4 @@
-export interface IPost {
+export interface ICardInfo {
     id: string | number;
     title: string;
     subtitle: string;
@@ -12,4 +12,10 @@ export interface IPost {
     name:string;
     href:string;
     soon:boolean;
+  }
+
+  export interface IIcon{
+    id:string | number;
+    name: string;
+    img:string
   }

@@ -1,4 +1,4 @@
-import { INavOptions, IPost as ICardInfo } from "@/interfaces";
+import { INavOptions, ICardInfo, IIcon } from "@/interfaces";
 
 //for cards
 export const cards: ICardInfo[] = [
@@ -32,9 +32,27 @@ export const cards: ICardInfo[] = [
 ];
 
 //for navigation
-export const navigationOptions:INavOptions[] = [
+export const navigationOptions: INavOptions[] = [
   { id: 1, name: "Creon Pass", href: "", soon: false },
   { id: 2, name: "Token", href: "", soon: true },
   { id: 3, name: "AI Revenue", href: "", soon: true },
   { id: 4, name: "AI Launchpad", href: "", soon: true },
+];
+
+export const iconsFooter: IIcon[] = [
+  {
+    id: 1,
+    name: "Telegram",
+    img: "../../images/Telegram.svg",
+  },
+  {
+    id: 2,
+    name: "Discord",
+    img: "../../images/Discord.svg",
+  },
+  {
+    id: 3,
+    name: "Twitter",
+    img: "../../images/Twitter.svg",
+  },
 ];

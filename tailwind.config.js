@@ -21,6 +21,9 @@ module.exports = {
         "monument": ['var(--font-monument)'],
         "satoshi": ['var(--font-satoshi)'],
       },
+      spacing: {
+        'icons': '34px'
+      }
     },
   },
   plugins: [],
