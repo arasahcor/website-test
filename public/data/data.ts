@@ -56,3 +56,22 @@ export const iconsFooter: IIcon[] = [
     img: "../../images/Twitter.svg",
   },
 ];
+
+export const passNFTData: {id:string|number, text:string}[] = [
+  {
+    id: 1,
+    text: "Pre-launch investment opportunities for upcoming AI projects",
+  },
+  {
+    id: 2,
+    text: "Free and early access to Creon built AI projects",
+  },
+  {
+    id: 3,
+    text: "Higher allocation limits on the Creon AI Launchpad",
+  },
+  {
+    id: 4,
+    text: "Revenue share distribution from Creon built AI projects",
+  },
+];

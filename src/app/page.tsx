@@ -1,19 +1,8 @@
-import ComingSoon from "@/components/sections/ComingSoon";
-import HeroSection from "@/components/sections/HeroSection";
 
-export default function Home() {
+import Home from "./home/page";
+
+export default function Main() {
   return (
-    <div>
-      {/* header and cover*/}
-      <HeroSection />
-      <div className={"container mx-auto "}>
-        {/* Creon Pass */}
-        {/* Profiting */}
-        {/* Our mission */}
-        {/* Coming soon */}
-        <ComingSoon />
-        {/* details */}
-      </div>
-    </div>
+    <Home/>
   );
 }

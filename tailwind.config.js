@@ -6,7 +6,8 @@ module.exports = {
       colors: {
         bgCards: "#13171D",
         purple: '#AB23FF',
-        blue: "#3D8BFF"
+        blue: "#3D8BFF",
+        greyLine: "#13171D"
       },
       fontSize:{
         'subtitle': '38px' ,
