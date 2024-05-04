@@ -17,6 +17,7 @@ module.exports = {
           lineHeight: '1.1',
         }],
         'badge':'10px',
+        '22s':'22px'
       },
       fontFamily: {
         "monument": ['var(--font-monument)'],

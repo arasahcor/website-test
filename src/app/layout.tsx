@@ -51,7 +51,7 @@ export default function RootLayout({
         className={`bg-black ${inter.variable} ${monument.variable} ${satoshi.variable}`}
       >
         {children}
-        {/* footer is common, should stay here */}
+        {/* footer is common to all pages*/}
         <Footer />
       </body>
     </html>
