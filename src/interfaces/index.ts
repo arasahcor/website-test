@@ -6,4 +6,10 @@ export interface IPost {
     description: string;
     imageUrl: string;
   }
-  
+
+  export interface INavOptions{
+    id:string |number;
+    name:string;
+    href:string;
+    soon:boolean;
+  }

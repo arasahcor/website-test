@@ -1,12 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import { IPost } from "@/interfaces";
-import { posts } from "../../../public/data/data";
+import { cards } from "../../../public/data/data";
 
 //fix images colors, it should come with the images
 export default function ComingSoon() {
   return (
     <section className="mt-5 mx-auto grid justify-items-center max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
-      {posts.map((post: IPost) => (
+      {cards.map((post: IPost) => (
         <div
           key={post.id}
           className="w-full md:max-w-md bg-bgCards bg-opacity-70 rounded-md max-w-lg rounded "

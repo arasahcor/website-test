@@ -11,7 +11,11 @@ module.exports = {
       fontSize:{
         'subtitle': '38px' ,
         'gradientText': '22px',
-        'title': '68px'
+        'title': '68px',
+        'title': ['68px', {
+          lineHeight: '1.1',
+        }],
+        'badge':'10px',
       },
       fontFamily: {
         "monument": ['var(--font-monument)'],

@@ -1,6 +1,7 @@
-import { IPost } from "@/interfaces";
+import { INavOptions, IPost as ICardInfo } from "@/interfaces";
 
-export const posts: IPost[] = [
+//for cards
+export const cards: ICardInfo[] = [
   {
     id: 1,
     title: "token",
@@ -28,4 +29,12 @@ export const posts: IPost[] = [
       "The Creon AI Launchpad, an essential component of our initiative, represents a groundbreaking opportunity in the realm of AI and blockchain. It provides the first known platform for acquiring allocations in tokenized AI projects, offering our community of NFT and CREON token holders early access to innovative and promising AI endeavors.",
     imageUrl: "../images/cS3.webp",
   },
+];
+
+//for navigation
+export const navigationOptions:INavOptions[] = [
+  { id: 1, name: "Creon Pass", href: "", soon: false },
+  { id: 2, name: "Token", href: "", soon: true },
+  { id: 3, name: "AI Revenue", href: "", soon: true },
+  { id: 4, name: "AI Launchpad", href: "", soon: true },
 ];

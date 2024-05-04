@@ -5,65 +5,69 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-
-const navigation = [
-  { name: "Creon Pass", href: "" },
-  { name: "Token", href: "" },
-  { name: "AI Revenue", href: "" },
-  { name: "AI Launchpad", href: "" },
-];
+import { INavOptions } from "@/interfaces";
+import { navigationOptions } from "../../../public/data/data";
 
 export default function HeroSection() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <div>
+      <div>
       <video
-        className="fill absolute"
+        className="absolute"
         src={require("../../../public/videos/main-background-video.mp4")}
         muted
         loop
         autoPlay
       />
-
+      <div className="absolute inset-0 bg-gradient-to-b from-purple via-blue via-30% to-black to-70% opacity-40"></div>
+      </div>
       <header className="absolute inset-x-0 top-0 z-50">
         <nav
-          className="flex items-center justify-between p-6 lg:px-8"
+          className="flex items-center justify-between p-8 lg:px-12"
           aria-label="Global"
         >
           <div className="flex lg:flex-1">
             <a href="#" className="-m-1.5 p-1.5">
-              <span className="sr-only">Your Companydfsdf</span>
+              <span className="sr-only">Your Company</span>
               <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt=""
+                className="h-[39px]"
+                src="../../images/logo.svg"
+                alt="creon logo"
               />
             </a>
           </div>
           <div className="flex lg:hidden">
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              className="text-white -m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-12">
-            {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-lg  hover:text-blue  font-bold font-satoshi text-white "
-              >
-                {item.name}
-              </a>
-            ))}
-          </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <button className="text-lg bg-transparent hover:bg-blue  font-bold font-satoshi text-white py-1.5 px-7 border-2 border-white hover:border-blue hover:border-transparent rounded-md">
+          <div className="hidden items-center lg:flex justify-between lg:gap-x-16">
+            <div className="flex gap-x-11">
+              {navigationOptions.map((item: INavOptions) => (
+                <div key={item.id} className="items-center flex">
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-lg  hover:text-blue  font-bold font-satoshi text-white "
+                  >
+                    {item.name}
+                  </a>
+                  {item.soon && (
+                    <span className="mb-[7px] ml-1 uppercase font-bold px-1 rounded-full text-badge text-purple font-satoshi bg-black">
+                      soon
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+            <button className="ease-in duration-300 text-lg bg-transparent hover:bg-blue  font-bold font-satoshi text-white py-1.5 px-7 border-2 border-white hover:border-blue hover:border-transparent rounded-md">
               Connect
             </button>
           </div>
@@ -96,7 +100,7 @@ export default function HeroSection() {
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
-                  {navigation.map((item) => (
+                  {navigationOptions.map((item: INavOptions) => (
                     <a
                       key={item.name}
                       href={item.href}
@@ -120,21 +124,18 @@ export default function HeroSection() {
         </Dialog>
       </header>
 
-      <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div
-          className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-          aria-hidden="true"
-        ></div>
-        <div className="py-32 sm:py-48 lg:py-56">
-          <div className="hidden sm:mb-8 sm:flex sm:justify-center"></div>
-          <div className="text-center">
-            <h1 className="font-monument text-left text-white text-title uppercase text-white">
-              The world's first platform for Tokenizing AI blockchain projects
-            </h1>
-            <p className="mt-6 break-words font-satoshi font-bold bg-gradient-to-r from-blue to-purple inline-block text-transparent text-gradientText bg-clip-text">
-              Creon «Create On» confidential AI Tools for granting access
-              through NFTs.
+      <div className="relative px-6 pt-24 md:pt-72 lg:px-8">
+        <div className="px-8 xl:px-52 py-32 sm:py-48 lg:py-56">
+          <h1 className="font-monument text-left text-white text-subtitle uppercase text-white md:text-title">
+            The world's first platform for Tokenizing AI blockchain projects
+          </h1>
+
+          <div className="flex flex-col w-fit pt-5">
+            <hr className="h-px my-1.5 bg-gradient-to-r from-blue to-purple border-0 "></hr>
+            <p className="break-words font-satoshi font-bold  text-gradientText bg-gradient-to-r from-blue to-purple bg-clip-text text-transparent">
+              Hold the Creon Pass NFT and earn passive income from AI Tools
             </p>
+            <hr className="h-px my-1.5 bg-gradient-to-r from-blue to-purple border-0 "></hr>
           </div>
         </div>
       </div>
