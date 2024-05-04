@@ -1,6 +1,6 @@
 import { passNFTData } from "../../../public/data/data";
 
-export default function PassNFT() {
+export default function CreonPass() {
   return (
     <section className="grid justify-items-between max-w-2xl grid-cols-1  lg:max-w-none mx-6  lg:grid-cols-2">
       <div>

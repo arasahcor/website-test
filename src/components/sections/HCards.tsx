@@ -3,7 +3,7 @@ import { ICardInfo } from "@/interfaces";
 import { cards } from "../../../public/data/data";
 
 //fix images colors, it should come with the images
-export default function ComingSoon() {
+export default function HCards() {
   return (
     <section className="my-5 grid justify-items-center lg:justify-items-between max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
       {cards.map((post: ICardInfo) => (

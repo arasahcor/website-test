@@ -2,7 +2,7 @@
 import { ICardInfo } from "@/interfaces";
 import { cards2 } from "../../../public/data/data";
 
-export default function Details() {
+export default function VCards() {
   return (
     <section className="my-24 mx-auto grid justify-items-center w-lg xl:w-[97%]">
       {cards2.map((card: ICardInfo) => (

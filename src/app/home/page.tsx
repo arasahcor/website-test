@@ -1,25 +1,22 @@
-import ComingSoon from "@/components/sections/ComingSoon";
-import Details from "@/components/sections/Details";
-import HeroSection from "@/components/sections/HeroSection";
+import HCards from "@/components/sections/HCards";
+import VCards from "@/components/sections/VCards";
+import CoverSection from "@/components/sections/CoverSection";
 import Profiting from "@/components/sections/Profiting";
-import PassNFT from "@/components/sections/passNFT";
+import CreonPass from "@/components/sections/CreonPass";
+import Mission from "@/components/sections/Mission";
 
 //  /home directory
 export default function Home() {
   return (
     <div>
       {/* header and cover*/}
-      <HeroSection />
-      <div className={"container mx-auto "}>
-        {/* Creon Pass */}
-        <PassNFT />
-        {/* Profiting section */}
+      <CoverSection />
+      <div className={"container mx-auto"}>
+        <CreonPass />
         <Profiting />
-        {/* Our mission */}
-        {/* Coming soon */}
-        <ComingSoon />
-        {/* details */}
-        <Details/>
+        <Mission />
+        <HCards />
+        <VCards />
       </div>
     </div>
   );

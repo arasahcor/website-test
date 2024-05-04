@@ -2,7 +2,7 @@
 
 import NavBar from "../layout/Navbar";
 
-export default function HeroSection() {
+export default function CoverSection() {
   return (
     <div className="relative overflow-hidden">
       <video
