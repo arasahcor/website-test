@@ -23,18 +23,19 @@ export default function CreonPass() {
             </p>
           ))}
         </div>
-          <button className="w-full lg:w-96 ease-in duration-300 hover:blue mt-6 rounded-md text-lg font-satoshi font-bold mb-10 py-3 text-white bg-gradient-to-r from-blue to-purple">
-            Buy Creon Pass
-          </button>
+        <button className="w-full lg:w-96 ease-in duration-300 hover:blue mt-6 rounded-md text-lg font-satoshi font-bold mb-10 py-3 text-white bg-gradient-to-r from-blue to-purple">
+          Buy Creon Pass
+        </button>
       </div>
       <div className="my-auto sm:my-10">
         <video
           className="w-full h-auto max-w-full min-w-96 max-w-full"
-          src={require("../../../public/videos/nft-video.mp4")}
           muted
           loop
           autoPlay
-        />
+        >
+          <source src="../videos/nft-video.mp4" type="video/mp4" />
+        </video>
       </div>
     </section>
   );

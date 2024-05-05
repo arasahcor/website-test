@@ -12,11 +12,12 @@ export default function Profiting() {
         <div className="col-span-3 lg:col-span-2 my-auto ">
           <video
             className="w-full h-auto max-w-full min-w-96 max-w-full"
-            src={require("../../../public/videos/creon-logo.mp4")}
             muted
             loop
             autoPlay
-          />
+          >
+            <source src="../videos/creon-logo.mp4" type="video/mp4" />
+          </video>
         </div>
         <div className="flex h-full flex-col justify-center col-span-3 lg:col-span-1 border-x px-6 w-fit  border-greyLine">
           <p className="font-satoshi text-22s  mb-5 font-bold">

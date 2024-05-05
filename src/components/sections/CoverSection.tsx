@@ -7,7 +7,6 @@ export default function CoverSection() {
     <div className="relative overflow-hidden">
       <video
         className="absolute w-full h-auto min-w-[1200px] max-w-full "
-        // src={require("../../../public/videos/main-background-video.mp4")}
         muted
         loop
         autoPlay
@@ -15,7 +14,7 @@ export default function CoverSection() {
         <source
           src="../videos/main-background-video.mp4"
           type="video/mp4"
-        ></source>
+        />
       </video>
       <div className="absolute inset-0 bg-gradient-to-b from-purple via-blue via-30% to-black to-70% opacity-40"></div>
 
