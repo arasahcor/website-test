@@ -4,8 +4,8 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { IIcon, INavOptions } from "@/interfaces";
-import { iconsFooter, navigationOptions } from "../../../public/data/data";
+import {  INavOptions } from "@/interfaces";
+import { navigationOptions } from "../../../public/data/data";
 import { GetIconsFooter } from "./footer/utils";
 
 export default function NavBar() {
@@ -22,7 +22,7 @@ export default function NavBar() {
             <span className="sr-only">Creon</span>
             <img
               className="h-[39px]"
-              src="../../images/logo.svg"
+              src="../images/logo.svg"
               alt="creon logo"
             />
           </a>

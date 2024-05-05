@@ -57,7 +57,7 @@ export const iconsFooter: IIcon[] = [
   },
 ];
 
-export const passNFTData: {id:string|number, text:string}[] = [
+export const passNFTData: { id: string | number; text: string }[] = [
   {
     id: 1,
     text: "Pre-launch investment opportunities for upcoming AI projects",
@@ -100,5 +100,36 @@ export const cards2: ICardInfo[] = [
     description:
       "Artificial Intelligence and blockchain technology are two groundbreaking areas leading new technological innovations. The combination of these two technologies creates intriguing possibilities. For instance, Non-Fungible Tokens (NFTs) can leverage AI to create unique digital artworks or to provide exclusive AI-based services. Meanwhile, cryptocurrencies can benefit from AI by improving security mechanisms, transaction efficiency, and service personalization. Such combination brings substantial benefits for both developers and users, paving the way for unprecedented possibilities.",
     imageUrl: "../images/dC3.webp",
+  },
+];
+
+export const accordionData: ICardInfo[] = [
+  {
+    id: 1,
+    title: "Profitability and Growth",
+    description:
+      "At Creon, we handpick cutting-edge AI projects and offer our community and token holders early access and investment opportunities. Our community actively contributes to the growth and profitability of these projects, creating a dynamic ecosystem of innovation and shared success.",
+    imageUrl: "../images/accIcon3.svg",
+  },
+  {
+    id: 2,
+    title: "Transparent & Fair Decentralized Earnings",
+    description:
+      "At Creon, we handpick cutting-edge AI projects and offer our community and token holders early access and investment opportunities. Our community actively contributes to the growth and profitability of these projects, creating a dynamic ecosystem of innovation and shared success.",
+    imageUrl: "../images/accIcon2.svg",
+  },
+  {
+    id: 3,
+    title: "Launching the future",
+    description:
+      "At Creon, we handpick cutting-edge AI projects and offer our community and token holders early access and investment opportunities. Our community actively contributes to the growth and profitability of these projects, creating a dynamic ecosystem of innovation and shared success.",
+    imageUrl: "../images/accIcon1.svg",
+  },
+  {
+    id: 4,
+    title: "Limitless Possibilities of AI & Crypto",
+    description:
+      "At Creon, we handpick cutting-edge AI projects and offer our community and token holders early access and investment opportunities. Our community actively contributes to the growth and profitability of these projects, creating a dynamic ecosystem of innovation and shared success.",
+    imageUrl: "../images/accIcon4.svg",
   },
 ];
