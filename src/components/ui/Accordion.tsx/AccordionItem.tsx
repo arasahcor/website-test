@@ -6,7 +6,7 @@ import { ICardInfo } from "@/interfaces";
 
 export const AccordionItem = (data: ICardInfo) => {
   const { imageUrl, title, description } = data;
-  const [accordionOpen, setAccordionOpen] = useState(false);
+  const [accordionOpen, setAccordionOpen] = useState<boolean>(false);
   return (
     <div className="text-white">
       <div className="grid grid-cols-5 items-center py-4">

@@ -11,10 +11,7 @@ export default function CoverSection() {
         loop
         autoPlay
       >
-        <source
-          src="../videos/main-background-video.mp4"
-          type="video/mp4"
-        />
+        <source src="../videos/main-background-video.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 bg-gradient-to-b from-purple via-blue via-30% to-black to-70% opacity-40"></div>
 

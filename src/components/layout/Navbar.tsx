@@ -9,7 +9,7 @@ import { navigationOptions } from "../../../public/data/data";
 import { GetIconsFooter } from "./footer/utils";
 
 export default function NavBar() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
 
   return (
     <div>
