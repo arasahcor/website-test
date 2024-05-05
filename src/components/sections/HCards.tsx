@@ -11,7 +11,7 @@ export default function HCards() {
           key={post.id}
           className="w-full md:max-w-md bg-bgCards bg-opacity-70 rounded-md max-w-lg rounded "
         >
-          <div className="px-7 py-4 relative h-40 md:h-48  xl:h-40 ">
+          <div className="px-7 py-4 relative h-40 md:h-48 xl:h-40 ">
             {post.coming && (
               <span className="font-bold px-1.5 py-0.4 rounded-full text-xs font-satoshi uppercase bg-white absolute right-6 top-[-6px]">
                 Coming soon
@@ -24,9 +24,9 @@ export default function HCards() {
               {post.subtitle}
             </p>
           </div>
-          <div className="pr-6">
+          <div className="pr-6 overflow-hidden bg-cover">
             <img
-              className="w-full rounded-r-md object-cover h-48"
+              className="w-full rounded-r-md object-cover h-48 transition duration-300 ease-in-out hover:scale-110"
               src={post.imageUrl}
               alt={post.title}
             />
