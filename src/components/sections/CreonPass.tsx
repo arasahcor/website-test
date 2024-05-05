@@ -23,10 +23,9 @@ export default function CreonPass() {
             </p>
           ))}
         </div>
-        <button className=" hover:blue mt-6 rounded-md text-lg font-satoshi font-bold py-3 w-96 text-white bg-gradient-to-r from-blue to-purple">
-          Buy Creon Pass
-        </button>
-        <button className="transition duration-150 ease-in-out ...">Button A</button>
+          <button className="w-full lg:w-96 ease-in duration-300 hover:blue mt-6 rounded-md text-lg font-satoshi font-bold mb-10 py-3 text-white bg-gradient-to-r from-blue to-purple">
+            Buy Creon Pass
+          </button>
       </div>
       <div className="my-auto sm:my-10">
         <video
